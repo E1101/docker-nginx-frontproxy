@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+
+  ## --------------------------------------------
+  ## | Front Reverse Proxy/Balancer 
+  ## --------------------------------------------
+  web-server:
+    build:
+      context: ./.docker-compose
+      dockerfile: Dockerfile
+    image: papyoun_web-frontproxy
+    ports:
+     - "80:80"
+    volumes:
+     - ./.docker-compose/sites-enabled/:/etc/nginx/sites-enabled/
+     - ./.docker-compose/.htpasswd:/etc/nginx/.htpasswd
+     - ./www/:/var/www/html/
+    networks:
+      - front-network
+
+networks:
+  front-network:

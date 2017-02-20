@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html ng-app="DigiPeyk" dir="rtl" ui-router-styles>
+
+<head>
+
+    <!-- Setup page -->
+    <base href="/">
+    <link href="assets/img/logo/favicon.ico" rel="icon" type="image/x-icon"/>
+    <meta charset="UTF-8"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title ng-if="!ngMeta.title">دیجی پیک</title>
+    <title>{{ngMeta.title}}</title>
+
+    <!-- Meta tags -->
+    <meta name="author" content="دیجی پیک - تجربه ارسالی هوشمند" />
+    <meta name="description" content="دیجی پیک، سرویسی آنلاین است که با استفاده از آن قادر خواهید بود بسته های پستی خود را در کوتاه ترین زمان در سطح شهر جابه جا و پیگیری کنید." />
+
+    <!-- OpenGraph meta tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://DigiPeyk.com">
+    <meta property="og:locale" content="fa_IR.UTF-8">
+    <meta property="og:locale:alternate" content="en_US.UTF-8">
+    <meta property="og:site_name" content="دیجی پیک - تجربه ارسالی هوشمند">
+    <meta property="og:title" content="دیجی پیک - تجربه ارسالی هوشمند">
+    <meta property="og:author" content="دیجی پیک - تجربه ارسالی هوشمند">
+    <meta property="og:description" content="دیجی پیک، سرویسی آنلاین است که با استفاده از آن قادر خواهید بود بسته های پستی خود را در کوتاه ترین زمان در سطح شهر جابه جا و پیگیری کنید.">
+    <meta property="og:image" content="http://digipeyk.ir/assets/img/logo/logo-meta.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="60">
+    <meta property="og:image:height" content="60">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" media="all" href="assets/css/webfonts.css">
+    <link rel="stylesheet" media="all" href="assets/css/material.css">
+    <link rel="stylesheet" media="all" href="assets/css/toastr.css">
+    <link rel="stylesheet" media="all" href="assets/css/flexboxgrid.css">
+    <link rel="stylesheet" media="all" href="assets/css/style.css">
+    <link rel="stylesheet" media="all" href="assets/css/theme.css">
+
+    <!-- library -->
+    <script type="text/javascript" src="assets/js/extend.js"></script>
+    <script type="text/javascript" src="assets/js/countup.js"></script>
+    <script type="text/javascript" src="assets/js/pushstream.js"></script>
+    <script type="text/javascript" src="app/vendor/angular.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-animate.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-aria.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-imagecrop.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-material.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-messages.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-meta.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-resource.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-router.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-router-styles.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-sanitize.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-satellizer.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-socialshare.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-storage.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-table.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-toastr.js"></script>
+    <script type="text/javascript" src="app/vendor/angular-upload.js"></script>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/services/api.js"></script>
+    <script type="text/javascript" src="app/services/authentication.js"></script>
+    <script type="text/javascript" src="app/services/crud.js"></script>
+    <script type="text/javascript" src="app/services/push.js"></script>
+    <script type="text/javascript" src="app/services/scroll.js"></script>
+    <script type="text/javascript" src="app/directives/closeBox.js"></script>
+    <script type="text/javascript" src="app/directives/countup.js"></script>
+    <script type="text/javascript" src="app/directives/formValidation.js"></script>
+    <script type="text/javascript" src="app/directives/map.js"></script>
+    <script type="text/javascript" src="app/directives/tableList.js"></script>
+    <script type="text/javascript" src="app/controllers/header.js"></script>
+    <script type="text/javascript" src="app/controllers/home.js"></script>
+    <script type="text/javascript" src="app/controllers/landing.js"></script>
+    <script type="text/javascript" src="app/controllers/estimate.js"></script>
+    <script type="text/javascript" src="app/controllers/tracking.js"></script>
+    <script type="text/javascript" src="app/controllers/panel.js"></script>
+    <script type="text/javascript" src="app/controllers/order.js"></script>
+    <script type="text/javascript" src="app/controllers/requests.js"></script>
+    <script type="text/javascript" src="app/controllers/address.js"></script>
+    <script type="text/javascript" src="app/controllers/profile.js"></script>
+    <script type="text/javascript" src="app/controllers/sheets/details.js"></script>
+    <script type="text/javascript" src="app/controllers/dialogs/bookmark.js"></script>
+    <script type="text/javascript" src="app/controllers/dialogs/confirm.js"></script>
+    <script type="text/javascript" src="app/controllers/dialogs/share.js"></script>
+    <script type="text/javascript" src="app/controllers/dialogs/upload.js"></script>
+
+</head>
+
+<body ng-class="{collapsed: collapsed}">
+
+    <div id="wrapper" ui-view></div>
+
+    <!-- Google map API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqLDSQHJEKp16Mm75JmITsnS6FDdGLaw4"></script>
+
+</body>
+
+</html>
