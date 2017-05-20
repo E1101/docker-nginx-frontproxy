@@ -9,7 +9,7 @@ services:
     build:
       context: ./.docker-compose
       dockerfile: Dockerfile
-    image: papyoun_web-frontproxy
+    image: papion_web-frontproxy
     ports:
      - "80:80"
     volumes:
