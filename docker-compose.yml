@@ -17,7 +17,7 @@ services:
      - WAIT_FOR=papion_web-server
     volumes:
      - ./.docker-compose/etc/nginx/nginx.conf:/etc/nginx/nginx.conf
-     - ./.docker-compose/etc/nginx/sites-enabled/:/etc/nginx/sites-enabled/
+     - ./.docker-compose/etc/nginx/conf.d/:/etc/nginx/conf.d/
      - ./.docker-compose/.htpasswd:/etc/nginx/.htpasswd
      - ./www/:/usr/share/nginx/html:ro
     networks:
