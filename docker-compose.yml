@@ -12,12 +12,15 @@ services:
     image: papion_web-frontproxy
     ports:
      - "80:80"
+    environment:
+     ## ping this host and wait until its reply before running nginx
+     - WAIT_FOR=papion_web-server
     volumes:
-     - ./.docker-compose/sites-enabled/:/etc/nginx/sites-enabled/
+     - ./.docker-compose/etc/nginx/nginx.conf:/etc/nginx/nginx.conf
+     - ./.docker-compose/etc/nginx/sites-enabled/:/etc/nginx/sites-enabled/
      - ./.docker-compose/.htpasswd:/etc/nginx/.htpasswd
-     - ./www/:/var/www/html/
+     - ./www/:/usr/share/nginx/html:ro
     networks:
       - front-network
-    restart: always
 networks:
   front-network:
